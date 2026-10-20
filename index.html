@@ -28,7 +28,22 @@
             min-height: 100vh;
             scroll-behavior: smooth;
         }
+.resume-btn {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
 
+.resume-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -422,6 +437,34 @@
             opacity: 1;
             transform: translateY(0);
         }
+/* Project Bullet Styling with Checkmarks */
+.project-list {
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.project-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 6px;
+}
+
+.project-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+
+  /* Gradient checkmark */
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -481,7 +524,25 @@
             </div>
         </div>
     </section>
+<section class="section" id="about">
+  <div class="container">
+    <h2>About Me</h2>
+   <p class="section-subtitle">
+  AWS Cloud Engineer | DevOps Enthusiast | Infrastructure Automation
+</p>
+<a href="resume.pdf" download class="resume-btn">📄 Download Resume</a>
+<p>
+  Completed intensive AWS Cloud Engineering training at AFRO-CODERS HUB LLC (May 2025 – December 2025),
+  focusing on designing scalable, secure, and cost-optimized cloud solutions.
+</p>
 
+<p>
+  Hands-on experience deploying production-ready static websites on Amazon S3,
+  configuring IAM policies, automating deployments using AWS CLI,
+  and applying cloud architecture best practices.
+</p>
+  </div>
+</section>
     <section class="section" id="projects">
         <div class="container">
             <h2>Featured Projects</h2>
@@ -491,7 +552,19 @@
                     <div class="project-image">Serverless E-Commerce</div>
                     <div class="project-content">
                         <h3 class="project-title">AWS Serverless E-Commerce</h3>
-                        <p class="project-description">Fully serverless e-commerce platform built with AWS Lambda, DynamoDB, and API Gateway. Features include real-time inventory, secure payments via Stripe, and auto-scaling architecture.</p>
+                      <p class="project-description">
+Designed and implemented a fully serverless e-commerce application using AWS Lambda,
+API Gateway, and DynamoDB to deliver scalable backend functionality.
+Integrated a React frontend for dynamic user interaction and optimized
+API performance for low-latency responses.
+</p>
+
+<ul style="margin-top:10px;">
+  <li>Built RESTful APIs using API Gateway</li>
+  <li>Implemented business logic with AWS Lambda</li>
+  <li>Designed NoSQL data models in DynamoDB</li>
+  <li>Ensured scalability with event-driven architecture</li>
+</ul>  
                         <div class="tech-stack">
                             <span class="tech-tag">AWS Lambda</span>
                             <span class="tech-tag">DynamoDB</span>
@@ -620,30 +693,30 @@
             <div class="contact-content">
                 <p>I'm always interested in new opportunities and collaborations. Whether you need help with cloud architecture, DevOps implementation, or full-stack development, feel free to reach out!</p>
                 <div class="contact-info">
-                    <a href="mailto:your.email@example.com" class="contact-item">
-                        <span>📧</span>
-                        <span>your.email@example.com</span>
-                    </a>
-                    <a href="tel:+1234567890" class="contact-item">
-                        <span>📱</span>
-                        <span>+1 (234) 567-890</span>
-                    </a>
-                    <a href="#" class="contact-item">
-                        <span>📍</span>
-                        <span>Your City, Country</span>
-                    </a>
-                </div>
-                <div class="social-links">
-                    <a href="#" class="social-link" title="GitHub">
-                        <span>GH</span>
-                    </a>
-                    <a href="#" class="social-link" title="LinkedIn">
-                        <span>LI</span>
-                    </a>
-                    <a href="#" class="social-link" title="Twitter">
-                        <span>X</span>
-                    </a>
-                </div>
+      <a href="mailto:brekit56@yahoo.com" class="contact-item">
+  <span>📧</span>
+  <span>brekit56@yahoo.com</span>
+</a>
+
+<a href="tel:+15196350916" class="contact-item">
+  <span>📱</span>
+  <span>+1 (519) 635-0916</span>
+</a>          
+<a href="https://www.google.com/maps?q=Kitchener,+Ontario,+Canada" class="contact-item">
+    <span>📍</span>
+    <span>Kitchener, Ontario, Canada</span>
+</a>
+ <div class="social-links">
+
+  <a href="https://github.com/dawitAbbay" target="_blank" class="social-link" title="GitHub">
+    <span>GH</span>
+  </a>
+
+  <a href="https://www.linkedin.com/in/dawit-cherenet-25611b437/" target="_blank" class="social-link" title="LinkedIn">
+    <span>IN</span>
+  </a>
+
+</div>
             </div>
         </div>
     </section>
@@ -651,7 +724,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+                <p>&copy; 2026 Dawit Cherenet. All rights reserved.</p>
                 <p>Built with ❤️ and hosted on AWS</p>
             </div>
         </div>
